@@ -4,7 +4,7 @@ import Navbar, { UserID } from '../Components/Common/NavBar';
 import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom'; // เพิ่มการนำเข้าคำสั่ง useParams
 import { Employ, EventData, UserData } from './Interface';
-
+import IconButton from '@mui/material/IconButton';
 import { dbURL } from '../DB';
 import { Username } from '../Components/Common/NavBar';
 import axios, { AxiosResponse } from 'axios';
@@ -160,15 +160,20 @@ const ConcertInfoPage = () => {
 
                   </div>
                   <div className="right-content">
-                    <button type="button" onClick={() => {
+                  <IconButton style={{
+                            fontSize: '12px',
+                            backgroundColor: '#FFA62B',
+                            borderRadius: '20px',
+                            color: 'white',
+                            padding: '5px 20px'
+                        }} onClick={() => {
                       if (conName) {
                         handleHireButtonClick(recipient.user_id, conName , UserID , 1);                  
                       } else {
-                        // Handle the case where conName is undefined
-                        // You can show an error message or perform other actions here
+                        alert('คุณได้ทำการจ้างแล้ว')
                       }
                     }
-                    } >จ้าง</button>
+                    } >จ้าง</IconButton>
                 </div>
                 </div>
 

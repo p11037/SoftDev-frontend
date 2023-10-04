@@ -206,7 +206,7 @@ h2#text1{
     line-height: normal;
 }
   
-.right-content button {
+/* .right-content button {
     display: inline-flex;
     padding: 5px 20px;
     justify-content: center;
@@ -216,4 +216,4 @@ h2#text1{
     background: #FFA62B;
     color: white;
     border: 0;
-}
+} */
